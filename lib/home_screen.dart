@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_x/route_names.dart';
+import 'package:get_x/screen_one.dart';
+import 'package:get_x/screen_two.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -12,15 +15,26 @@ class HomeScreen extends StatelessWidget {
         title: Text("GetX"),
       ),
       body: Column(
-        children: [],
+        children: [
+          Center(
+            child: TextButton(
+                onPressed: () {
+                  //Get.to(ScreenOne(name: "Anand",));
+                  Get.toNamed(RouteNames.screenOne, arguments: [
+                    'Anand'
+                  ]);
+                },
+                child: Text("Go to Screen One")),
+          )
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Get.snackbar("Anand", "06",
               backgroundColor: Colors.blue,
-              onTap: (snap){
-              },
-              snackPosition: SnackPosition.TOP,colorText: Colors.white,
+              onTap: (snap) {},
+              snackPosition: SnackPosition.TOP,
+              colorText: Colors.white,
               icon: Icon(Icons.add));
         },
       ),
