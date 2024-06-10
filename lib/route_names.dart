@@ -4,5 +4,6 @@ class RouteNames {
   static const String screenTwo = "/screenTwo";
   static const String responsive = "/responsive";
   static const String language = "/language";
+  static const String counter = "/counter";
 
 }
