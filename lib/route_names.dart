@@ -5,5 +5,6 @@ class RouteNames {
   static const String responsive = "/responsive";
   static const String language = "/language";
   static const String counter = "/counter";
+  static const String fav = "/fav";
 
 }

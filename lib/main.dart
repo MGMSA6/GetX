@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_x/counter.dart';
+import 'package:get_x/favourites.dart';
 import 'package:get_x/home_screen.dart';
 import 'package:get_x/languages.dart';
 import 'package:get_x/responsive.dart';
@@ -23,13 +24,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Counter(),
+      home: const Favourites(),
       getPages: [
         GetPage(name: '/', page: () => HomeScreen()),
         GetPage(name: RouteNames.screenOne, page: () => ScreenOne()),
         GetPage(name: RouteNames.screenTwo, page: () => ScreenTwo()),
         GetPage(name: RouteNames.responsive, page: () => Responsive()),
         GetPage(name: RouteNames.counter, page: () => Counter()),
+        GetPage(name: RouteNames.fav, page: () => Favourites()),
       ],
       translations: Languages(),
       locale: Locale('en', 'US'),
